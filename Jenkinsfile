@@ -29,7 +29,7 @@ pipeline {
            }
       steps{
         script {
-          docker.withRegistry( 'https://registry.hub.docker.com', registryCredential ) {
+          docker.withRegistry( 'https://hub.docker.com/repository/docker/vinod9398/batch6', registryCredential ) {
             dockerImage.push("latest")
           }
         }
